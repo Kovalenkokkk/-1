@@ -81,8 +81,8 @@ class Room {// Room #3
 
 class Parrot {  // Parrot #4
 
-	string Parrot_color = "red-blue-yellow";
-	string Parrot_name = "Kesha";
+	string parrot_color = "red-blue-yellow";
+	string parrot_name = "Kesha";
 	int eyes = 2;
 	int wings = 2;
 	int beak = 1;
