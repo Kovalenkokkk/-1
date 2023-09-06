@@ -2,7 +2,7 @@
 using namespace std;
 
 
-class Man {// man #1
+class Man {// Man #1
 
 	double man_height = 180;
 	int man_eyes = 2;
