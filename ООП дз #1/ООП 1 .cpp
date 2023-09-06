@@ -2,7 +2,7 @@
 using namespace std;
 
 
-class man {// Мужчина #1
+class Man {// man #1
 
 	double man_height = 180;
 	int man_eyes = 2;
@@ -23,14 +23,14 @@ class man {// Мужчина #1
 		cout << "Listening to music\n";
 	}
 	void Cleaning() {
-		cout << "Turn On Washing maсhine\n";
+		cout << "Turn On Washing maГ±hine\n";
 	}
 };
 
-class phone {// Телефон #2
+class Phone {// Phone #2
 
 	double phone_height = 22;
-	int    camera = 4;
+	int camera = 4;
 	string name = "Samsung";
 	string phone_color = "Black";
 	double phone_weight = 187;
@@ -53,11 +53,11 @@ class phone {// Телефон #2
 };
 
 
-class Room {// Комната #3
+class Room {// Room #3
 
 	double square_meters = 27;
 	int number_of_people = 3;
-	string City = "Odessa";
+	string city = "Odessa";
 	int window = 2;
 	string Stuffed_Toysnam_weight = "Big Taddy";
 
@@ -74,22 +74,22 @@ class Room {// Комната #3
 		cout << "Listening to music\n";
 	}
 	void Cleaning() {
-		cout << "Turn On Washing maсhine\n";
+		cout << "Turn On Washing maГ±hine\n";
 	}
 };
 
 
-class pаrrot {  // Попугай #4
+class Parrot {  // Parrot #4
 
-	string parrot_color = "red-blue-yellow";
-	string parrot_name = "Kesha";
+	string Parrot_color = "red-blue-yellow";
+	string Parrot_name = "Kesha";
 	int eyes = 2;
 	int wings = 2;
 	int beak = 1;
 
 
 	void  MakeNoize() {
-		cout << " Caaarr  Caaarr"\n";
+		cout << " Caaarr  Caaarr\n";
 	}
 
 	void  talk() {
@@ -100,26 +100,26 @@ class pаrrot {  // Попугай #4
 		cout << "black\n";
 	}
 
-	void fruits interior() {
+	void fruits_interior() {
 		cout << " eat \n";
 	}
 
 	void foots() {
 		cout << " going \n";
 	}
-}
+};
 
-class car {  // машина #5
+class Car {  // Car #5
 
 	string car_color = "black";
 	string car_name = "Rols Roys";
-	int   window = 6;
-	double car_prise = 400, 000;
+	int window = 6;
+	double car_prise = 400000;
 	int steering_wheel = 1;
 
 
 	void  MakeNoize() {
-		cout << "Vrumvrum\n";
+		cout << "Vrum-vrum\n";
 	}
 
 	void  ride() {
@@ -130,24 +130,14 @@ class car {  // машина #5
 		cout << "White\n";
 	}
 
-	void car interior() {
+	void car_interior() {
 		cout << "Black-Brown\n";
 	}
 
 	void whell() {
 		cout << " 4 \n";
 	}
-}
-
-
-
-
-
-
-
-
-
-
+};
 
 
 int main()
