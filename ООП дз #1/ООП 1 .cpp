@@ -23,7 +23,7 @@ class Man {// man #1
 		cout << "Listening to music\n";
 	}
 	void Cleaning() {
-		cout << "Turn On Washing mañhine\n";
+		cout << "Turn On Washing machine\n";
 	}
 };
 
