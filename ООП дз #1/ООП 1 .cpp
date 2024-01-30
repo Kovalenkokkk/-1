@@ -1,146 +1,56 @@
 #include <iostream>
+#include <string>
+#include <vector>
+
 using namespace std;
 
-
-class Man {// Man #1
-
-	double man_height = 180;
-	int man_eyes = 2;
-	string name = "Viktor";
-	string eyes_color = "green";
-	double man_weight = 78;
-
-	void MakeNoize() {
-		cout << "Hello\n";
-	}
-	void Walk() {
-		cout << "Man Running\n";
-	}
-	void Sleep() {
-		cout << "Good Night!\n";
-	}
-	void Happy() {
-		cout << "Listening to music\n";
-	}
-	void Cleaning() {
-		cout << "Turn On Washing machine\n";
-	}
+class Student {
+public:
+    Student(string name) : name(name) {}
+    string GetName() const { return name; }
+private:
+    string name;
 };
 
-class Phone {// Phone #2
-
-	double phone_height = 22;
-	int camera = 4;
-	string name = "Samsung";
-	string phone_color = "Black";
-	double phone_weight = 187;
-
-	void MakeNoize() {
-		cout << "Ok Google              \n";
-	}
-	void call() {
-		cout << "Incoming call          \n";
-	}
-	void  charge() {
-		cout << "Charge 62%             \n";
-	}
-	void AlarmClock() {
-		cout << "Vibration              \n";
-	}
-	void Crash() {
-		cout << " Reboot                \n";
-	}
+class Group {
+public:
+    Group() : name(""), course(0), startDate(0, 0, 0) {}
+    void SetName(string name) { this->name = name; }
+    void SetCourse(int course) { this->course = course; }
+    void SetStartDate(int day, int month, int year) {
+        startDate.day = day;
+        startDate.month = month;
+        startDate.year = year;
+    }
+    void AddStudent(const Student& student) {
+        students.push_back(student);
+    }
+    string ToString() const {
+        string result = "Група " + name + ", " + to_string(course) + " курс, дата початку навчання " + to_string(startDate.day) + "." + to_string(startDate.month) + "." + to_string(startDate.year);
+        return result;
+    }
+    friend ostream& operator<<(ostream& os, const Group& group) {
+        os << group.ToString();
+        return os;
+    }
+private:
+    string name;
+    int course;
+    struct {
+        int day;
+        int month;
+        int year;
+    } startDate;
+    vector<Student> students;
 };
 
-
-class Room {// Room #3
-
-	double square_meters = 27;
-	int number_of_people = 3;
-	string city = "Odessa";
-	int window = 2;
-	string Stuffed_Toysnam_weight = "Big Taddy";
-
-	void MakeNoize() {
-		cout << "Hello\n";
-	}
-	void Walk() {
-		cout << "Man Running\n";
-	}
-	void Sleep() {
-		cout << "Good Night!\n";
-	}
-	void Happy() {
-		cout << "Listening to music\n";
-	}
-	void Cleaning() {
-		cout << "Turn On Washing mañhine\n";
-	}
-};
-
-
-class Parrot {  // Parrot #4
-
-	string parrot_color = "red-blue-yellow";
-	string parrot_name = "Kesha";
-	int eyes = 2;
-	int wings = 2;
-	int beak = 1;
-
-
-	void  MakeNoize() {
-		cout << " Caaarr  Caaarr\n";
-	}
-
-	void  talk() {
-		cout << " Answer\n";
-	}
-
-	void eyes() {
-		cout << "black\n";
-	}
-
-	void fruits_interior() {
-		cout << " eat \n";
-	}
-
-	void foots() {
-		cout << " going \n";
-	}
-};
-
-class Car {  // Car #5
-
-	string car_color = "black";
-	string car_name = "Rols Roys";
-	int window = 6;
-	double car_prise = 400000;
-	int steering_wheel = 1;
-
-
-	void  MakeNoize() {
-		cout << "Vrum-vrum\n";
-	}
-
-	void  ride() {
-		cout << "280\n";
-	}
-
-	void lights() {
-		cout << "White\n";
-	}
-
-	void car_interior() {
-		cout << "Black-Brown\n";
-	}
-
-	void whell() {
-		cout << " 4 \n";
-	}
-};
-
-
-int main()
-{
-
+int main() {
+    Student s("Alex");
+    Group g;
+    g.SetName("KND-221");
+    g.SetCourse(2);
+    g.SetStartDate(1, 9, 2022);
+    g.AddStudent(s);
+    cout << g << "\n";
+    return 0;
 }
